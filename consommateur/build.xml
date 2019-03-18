@@ -4,6 +4,7 @@
 	<property name="app.name" value="LogsV1" />
 	<property name="src.dir" value="${app.dir}/src" />
 	<property name="build.dir" value="${app.dir}/build" />
+    <property name="conf.dir" value="${app.dir}/conf" />
 	<property name="package.dir" value="logsv1" />
 	<property name="package.name" value="logsv1" />
 
@@ -28,6 +29,10 @@
 			<fileset dir="${build.dir}">
 				<include name="${package.dir}/**" />
 			</fileset>
+            <metainf dir="${conf.dir}">
+                <include name="persistence.xml" />
+            </metainf>
 		</jar>
 	</target>
+
 </project>
